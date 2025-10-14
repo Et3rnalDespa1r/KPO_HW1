@@ -1,3 +1,5 @@
+package animals;
+
 public class Herbo extends Animal {
     private final int kindness;
 

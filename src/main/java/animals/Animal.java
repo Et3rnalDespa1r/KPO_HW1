@@ -1,3 +1,8 @@
+package animals;
+
+import Interfaces.IAlive;
+import Interfaces.IInventory;
+
 public abstract class Animal implements IAlive, IInventory {
     private final String name;
     private final int food;

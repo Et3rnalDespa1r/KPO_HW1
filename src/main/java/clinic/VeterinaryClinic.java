@@ -1,3 +1,6 @@
+package clinic;
+
+import animals.Animal;
 import org.springframework.stereotype.Component;
 
 @Component

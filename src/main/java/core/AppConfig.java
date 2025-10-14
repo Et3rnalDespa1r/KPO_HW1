@@ -1,3 +1,6 @@
+package core;
+import clinic.VeterinaryClinic;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -6,6 +9,7 @@ public class AppConfig {
 
     @Bean
     public VeterinaryClinic veterinaryClinic() {
+
         return new VeterinaryClinic();
     }
 

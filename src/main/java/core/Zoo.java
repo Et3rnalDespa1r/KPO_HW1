@@ -1,5 +1,12 @@
+package core;
+
 import java.util.ArrayList;
 import java.util.List;
+import clinic.VeterinaryClinic;
+
+import animals.Animal;
+import animals.Herbo;
+import inventory.Thing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +34,7 @@ public class Zoo {
                 animals.add(animal);
                 System.out.println(animal.Name() + " добавлен в обычный зоопарк.");
             }
-        } else { // Predator
+        } else {
             animals.add(animal);
             System.out.println(animal.Name() + " добавлен в обычный зоопарк.");
         }
@@ -44,6 +51,7 @@ public class Zoo {
     }
 
     public int getAnimalCount() {
+
         return animals.size();
     }
 

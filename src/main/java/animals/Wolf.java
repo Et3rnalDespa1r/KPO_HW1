@@ -1,3 +1,5 @@
+package animals;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Wolf extends Predator {

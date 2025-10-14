@@ -1,3 +1,11 @@
+import animals.Monkey;
+import animals.Rabbit;
+import animals.Tiger;
+import animals.Wolf;
+import core.AppConfig;
+import inventory.Computer;
+import inventory.Table;
+import core.Zoo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -29,10 +37,10 @@ public class Main {
             switch (choice) {
                 case 1 -> {
                     System.out.println("Выберите животное:");
-                    System.out.println("1 - Тигр");
-                    System.out.println("2 - Волк");
-                    System.out.println("3 - Обезьяна");
-                    System.out.println("4 - Кролик");
+                    System.out.println("1 - Tiger");
+                    System.out.println("2 - Wolf");
+                    System.out.println("3 - Monkey");
+                    System.out.println("4 - Rabbit");
                     int type = scanner.nextInt();
                     int number = ThreadLocalRandom.current().nextInt(100, 999);
                     switch (type) {
@@ -45,8 +53,8 @@ public class Main {
                 }
                 case 2 -> {
                     System.out.println("Введите название вещи: ");
-                    System.out.println("1 - Стол");
-                    System.out.println("2 - Компьютер");
+                    System.out.println("1 - Table");
+                    System.out.println("2 - Computer");
                     int type = scanner.nextInt();
                     int number = ThreadLocalRandom.current().nextInt(1000, 9999);
                     switch (type) {

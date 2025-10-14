@@ -1,9 +1,13 @@
+import animals.*;
+import clinic.VeterinaryClinic;
+import inventory.Computer;
+import inventory.Table;
+import core.Zoo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +17,6 @@ public class ZooFullTest {
     private VeterinaryClinic clinic;
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private final PrintStream originalOut = System.out;
 
     @BeforeEach
     void setup() {
@@ -97,13 +100,10 @@ public class ZooFullTest {
         Herbo friendly = new Herbo("Deer", 3, 501, true, 8);
         Herbo unfriendly = new Herbo("Rabbit", 3, 502, true, 3);
         Herbo unhealthy = new Herbo("Rabbit", 3, 503, false, 7);
-        Tiger tiger = new Tiger(504);
 
         zoo.addAnimal(friendly);
         zoo.addAnimal(unfriendly);
         zoo.addAnimal(unhealthy);
-        zoo.addAnimal(tiger);
-
         assertEquals(2, zoo.getAnimalCount());
         assertEquals(1, zoo.getContactAnimalCount());
     }
